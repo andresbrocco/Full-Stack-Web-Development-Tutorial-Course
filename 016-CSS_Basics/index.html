@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Specificity is CSS</title>
+  </head>
+  <body>
+    <h1>Specificity in CSS</h1>
+    <p>When applying styles to elements, the browser calculates a "level of importance" to each style attribution, so in cases where there are more than one style attribution to the same element, it can decide which one should be applied. </p>
+    <p>There are four "levels" of specificity: </p>
+    <table border="1px solid black">
+      <tr>
+        <td></td><td>Importance</td>
+      </tr>
+      <tr>
+        <td> !important (Hard override)</td><td>infinite</td>
+      </tr>
+      <tr>
+        <td>Style attribute (inside html)</td><td>1000</td>
+      </tr>
+      <tr>
+        <td>ID</td><td>100</td>
+      </tr>
+      <tr>
+        <td>Class, Pseudo-Class, Attribute</td><td>10</td>
+      </tr>
+      <tr>
+        <td>Elements</td><td>1</td>
+      </tr>
+    </table>
+    <p>The total score is the sum of the importances given to that style. Examples:</p>
+    <ul>
+      <li>h1 {<i>style here</i>} = 1 point</li>
+      <li>div h1 {<i>style here</i>} = 2 points</li>
+      <li>html h1 {<i>style here</i>} = 2 points</li>
+      <li>body h1 {<i>style here</i>} = 2 points</li>
+      <li>.aClassName h1 {<i>style here</i>} = 11 points</li>
+      <li>#anIDName {<i>style here</i>} = 100 points</li>
+      <li>[id="anIDName"] {<i>style here</i>} = 10 points</li>
+      <li>h1 {color: blue !important} = infinite points</li>
+    </ul>
+    <p>Obs.:</p>
+    <ul>
+      <li>[id="anIDName"] is a way to select attributes, so we are downgrading the importance of an ID to the importance of an attribute.</li>
+      <li>Hard overriding is highly not advisable.</li>
+      <li>If after the calculation there is a draw on the score, the last style found in the file is applied.</li>
+    </ul>
+    <p></p>
+  </body>
+</html>
