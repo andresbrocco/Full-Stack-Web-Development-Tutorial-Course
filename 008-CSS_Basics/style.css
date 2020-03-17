@@ -1,0 +1,58 @@
+h3 {
+  background: grey;
+}
+h4{
+  text-align: center;
+}
+body {
+  background-color: #cc99ff;
+}
+ul li {
+  color: blue;
+}
+ul > li {
+  color: white;
+}
+ul > ol > ul > li {
+  color: green;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: magenta;
+  margin: auto;
+  text-align: center;
+  box-shadow: 3px 3px rgb(59, 30, 99);
+}
+.squareLinearGradient{
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to right, rgb(250, 144, 127), rgb(37, 147, 71));
+  margin: auto;
+  text-align: center;
+}
+.squareRadialGradient{
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(rgb(250, 144, 127), rgb(37, 147, 71));
+  margin: auto;
+  text-align: center;
+}
+.backgroundImage{
+  width: 440px;
+  height: 300px;
+  background-size: cover;
+  background-image: url(kiwi.jpg);
+  background-repeat: no-repeat;
+  border: 10px solid rgb(27, 86, 108);
+}
+#circle {
+  color: darkred;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgb(98, 33, 144);
+}
+
+h5, p {
+  color: rgb(0, 122, 47);
+
+}

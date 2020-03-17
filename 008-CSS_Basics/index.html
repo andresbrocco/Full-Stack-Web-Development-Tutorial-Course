@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      h1 {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>body background color: soft purple</p>
+    <h1>Heading 1 - internal CSS</h1>
+    <h2 style="color: red;">
+      Heading 2 - inline CSS</h2>
+    <h1 style="color: red;">
+      Heading 1 + inline CSS = overrides internal CSS</h1>
+    <h3>Heading 3 - external CSS</h3>
+    <h4>textalign: center</h4>
+    <br>
+    <div class="square">
+      div class named square with box shadow
+    </div>
+    <div id="circle">
+      div id named circle with blurred shadow
+    </div>
+    <br>
+    <div class="squareLinearGradient">
+      linear-gradient
+    </div>
+    <br>
+    <div class="squareRadialGradient">
+      radial-gradient
+    </div>
+    <br>
+    <div class="backgroundImage">
+      background image
+    </div>
+    <br>
+    <br>
+    <p>using combinators to select descendents or direct child:</p>
+    <ul>
+      <li>child 1</li>
+      <li>child 2</li>
+      <ol>
+        <li>child 1 of child 2</li>
+        <li>child 2 of child 2</li>
+        <ul>
+          <li>third generation</li>
+        </ul>
+      </ol>
+      <li>child 3</li>
+    </ul>
+    <h5>Header 5 and paragraph were set to have the same color using group assignment</h5>
+    <p>That way, the browser loads faster!</p>
+  </body>
+</html>
