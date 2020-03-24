@@ -1,0 +1,29 @@
+html {
+  font-family: cursive, serif, monospace; /*if the browser don't recognise the first, it will try the next one.
+
+  When a font name has spaces, we need to put its name inside double quotes: "Times new roman".*/
+}
+
+h1 {
+  color: blue;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h2 {
+  word-spacing: 3rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.formatting {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: grey;
+  text-align: center;
+}
+
+.usingGoogleFonts {
+  font-size: 2rem;
+  font-family: 'Liu Jian Mao Cao', sans-serif;
+}
