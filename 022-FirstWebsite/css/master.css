@@ -1,0 +1,77 @@
+/*######################## Defaults ########################*/
+nav, header, footer {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+}
+
+/*######################## Nav bar ########################*/
+nav {
+  width: 100%;
+  margin: 0;
+}
+
+nav ul {
+  background-color: rgb(149, 193, 180);
+  overflow: hidden; /*When the browser is collapsing (to fit a mobile phone resolution, for example), any element that falls off the page will be hidden, instead of appearing a horizontal scroll*/
+  margin: 0;
+  padding: 0;
+}
+
+ul.topnav li {
+  list-style: none;
+  float: left; /*Instead of placing list items vertically, place them side to side*/
+
+}
+
+ul.topnav li.topnav-right {
+  float: right;
+}
+
+ul.topnav li a {
+  display: block;
+  text-decoration: none;
+  min-height: 1rem;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+ul.topnav li a:hover { /*what happens when the mouse cursor hover these elements*/
+  background-color: rgb(35, 54, 106);
+  color: white;
+}
+
+ul.topnav li.dropdownIcon {
+  float: right;
+  display: none; /*Start with the menu icon hidden*/
+}
+
+/*######################## Mobile ########################*/
+@media screen and (max-width: 680px){ /*Media query that applies only when width is less than 680px*/
+  ul.topnav li:not(:nth-child(1)) { /*Grab every li except for the first child (Home)*/
+    display: none;
+  }
+  ul.topnav li.dropdownIcon {
+    display: block;
+  }
+  ul.topnav.responsive li.dropdownIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  ul.topnav.responsive {
+    position: relative;
+  }
+  ul.topnav.responsive li {
+    display: inline;
+    float: none;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
