@@ -10,26 +10,6 @@
 }
 
 /*######################## Defaults ########################*/
-nav, header, footer {
-  display: block;
-}
-
-body {
-  line-height: 1;
-  margin: 0;
-}
-
-.hero {
-  width: 100%;
-  margin: auto;
-  padding-top: 4%;
-  padding-bottom: 4%;
-  background: var(--color-hero-background-top); /*Backup color if gradient fails*/
-  background: -webkit-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Chrome and Safari*/
-  background: -o-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Opera*/
-  background: -moz-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Firefox Mozilla*/
-  background: linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom)); /*Weird browsers*/
-}
 
 .row {
   width: 100%;
@@ -65,40 +45,18 @@ body {
   align-content: center;
 }
 
-h1.large {
-  color: black;
-  font-size: 2rem;
-  margin: 0;
-  line-height: 2rem;
-  max-width: 16rem;
-  width: fit-content;
+nav, header, footer {
+  display: block;
 }
 
-form h2 {
+body {
+  line-height: 1;
+  margin: 0;
+}
+
+label {
   font-size: 1.25rem;
-  padding: 0.5rem;
-  margin: 0;
-}
-
-input[class="inputBox"] {
-  font-size: 1rem;
-  width: 15rem;
-}
-
-.iframe-container { /*This container will adapt its size to the screen*/
-  position: relative;
-  overflow: hidden;
-  width: 50%; /*percentage of width of parent container*/
-  padding-top: 50%; /*percentage of width of parent container*/
-}
-
-.iframe-container iframe { /*iframes are unable to adapt size, that's why we put it inside a container*/
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
+  font-weight: bold;
 }
 
 /*######################## Nav bar ########################*/
@@ -144,6 +102,141 @@ ul.topnav li.dropdownIcon {
   display: none; /*Start with the menu icon hidden*/
 }
 
+/*######################## Hero ########################*/
+
+.hero {
+  width: 100%;
+  margin: auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background: var(--color-hero-background-top); /*Backup color if gradient fails*/
+  background: -webkit-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Chrome and Safari*/
+  background: -o-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Opera*/
+  background: -moz-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Firefox Mozilla*/
+  background: linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom)); /*Weird browsers*/
+}
+
+h1.large {
+  color: black;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 2rem;
+  max-width: 16rem;
+  width: fit-content;
+}
+
+form h2 {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+input[class="inputBox"] {
+  font-size: 1rem;
+  width: 15rem;
+}
+
+.iframe-container { /*This container will adapt its size to the screen*/
+  position: relative;
+  overflow: hidden;
+  width: 50%; /*percentage of width of parent container*/
+  padding-top: 50%; /*percentage of width of parent container*/
+}
+
+.iframe-container iframe { /*iframes are unable to adapt size, that's why we put it inside a container*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+/*######################## Section 1 ########################*/
+
+h1.section2Heading {
+  text-align: center;
+}
+
+div.box {
+  text-align: center;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  margin: 1rem;
+  background-color: white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+  border-radius: 0.25rem;
+}
+
+div.mozonPics {
+  padding: 0.5rem;
+}
+
+div.mozonPics img {
+  border-radius: 0.25rem;
+}
+
+.agreeButton {
+  font-size: 2rem;
+  padding: 0.25rem 1rem;
+  background-image: radial-gradient(var(--color-topnav-text), var(--color-topnav-background));
+  border-radius: 0.5rem;
+  color: black;
+  border: 3px solid var(--color-topnav-text);
+  margin-bottom: 1.5rem;
+}
+
+.agreeButton:hover{
+  background-image: radial-gradient(var(--color-topnav-background), var(--color-topnav-text));
+  color: white;
+  border: 3px solid white;
+
+}
+/*######################## Section 2 ########################*/
+
+article p {
+  font-size: 1.25rem;
+  padding: 2rem;
+  text-align: justify;
+}
+
+div.col-5 img {
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  margin: 5%;
+  width: 90%; /*percentage of width of parent container*/
+  padding-top: 50.625%; /*Aspect Ratio of the image!! (percentage of width of parent) container*/
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+}
+
+.image-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*######################## Footer ########################*/
+
+footer {
+  background-color: hsla(140, 100%, 21%, 0.72);
+}
+
+footer h1 {
+  font-size: 1.25rem;
+}
+
+footer ul {
+  margin-top: 0;
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+}
+
 /*######################## Mobile ########################*/
 @media (max-width: 600px){ /*Run this CSS only when the Media query says the screen has a width less than 600px*/
   ul.topnav li:not(:nth-child(1)) { /*Grab every li except for the first child (Home)*/
@@ -168,9 +261,12 @@ ul.topnav li.dropdownIcon {
     display: block;
     text-align: left;
   }
-  .col-6 { /*Make video brake line when in mobile mode*/
+  .col-4, .col-5, .col-6, .col-7 { /*Make video brake line when in mobile mode*/
     width: 100%;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+  div.box {
+    margin: 0.5rem;
   }
 }
