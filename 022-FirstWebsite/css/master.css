@@ -1,3 +1,14 @@
+/*######################## Color Palette ########################*/
+:root {
+  --color-topnav-background: hsla(140, 65%, 35%, 1);
+  --color-topnav-text: hsla(140, 50%, 15%, 1);
+  --color-topnav-background-hover: hsla(140, 25%, 25%, 1);
+  --color-topnav-text-hover: var(--color-topnav-background);
+  --color-hero-background-top: var(--color-topnav-background);
+  --color-hero-background-bottom: transparent;
+
+}
+
 /*######################## Defaults ########################*/
 nav, header, footer {
   display: block;
@@ -8,6 +19,88 @@ body {
   margin: 0;
 }
 
+.hero {
+  width: 100%;
+  margin: auto;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background: var(--color-hero-background-top); /*Backup color if gradient fails*/
+  background: -webkit-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Chrome and Safari*/
+  background: -o-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Opera*/
+  background: -moz-linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom));/*For Firefox Mozilla*/
+  background: linear-gradient(var(--color-hero-background-top), var(--color-hero-background-bottom)); /*Weird browsers*/
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.row::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/*Divide 100% in 12: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] { /*every single class that starts with "col-"*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+h1.large {
+  color: black;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 2rem;
+  max-width: 16rem;
+  width: fit-content;
+}
+
+form h2 {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+input[class="inputBox"] {
+  font-size: 1rem;
+  width: 15rem;
+}
+
+.iframe-container { /*This container will adapt its size to the screen*/
+  position: relative;
+  overflow: hidden;
+  width: 50%; /*percentage of width of parent container*/
+  padding-top: 50%; /*percentage of width of parent container*/
+}
+
+.iframe-container iframe { /*iframes are unable to adapt size, that's why we put it inside a container*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
 /*######################## Nav bar ########################*/
 nav {
   width: 100%;
@@ -15,7 +108,7 @@ nav {
 }
 
 nav ul {
-  background-color: rgb(149, 193, 180);
+  background-color: var(--color-topnav-background);
   overflow: hidden; /*When the browser is collapsing (to fit a mobile phone resolution, for example), any element that falls off the page will be hidden, instead of appearing a horizontal scroll*/
   margin: 0;
   padding: 0;
@@ -32,6 +125,7 @@ ul.topnav li.topnav-right {
 }
 
 ul.topnav li a {
+  color: var(--color-topnav-text);
   display: block;
   text-decoration: none;
   min-height: 1rem;
@@ -41,8 +135,8 @@ ul.topnav li a {
 }
 
 ul.topnav li a:hover { /*what happens when the mouse cursor hover these elements*/
-  background-color: rgb(35, 54, 106);
-  color: white;
+  background-color: var(--color-topnav-background-hover);
+  color: var(--color-topnav-text-hover);
 }
 
 ul.topnav li.dropdownIcon {
@@ -51,7 +145,7 @@ ul.topnav li.dropdownIcon {
 }
 
 /*######################## Mobile ########################*/
-@media screen and (max-width: 680px){ /*Media query that applies only when width is less than 680px*/
+@media (max-width: 600px){ /*Run this CSS only when the Media query says the screen has a width less than 600px*/
   ul.topnav li:not(:nth-child(1)) { /*Grab every li except for the first child (Home)*/
     display: none;
   }
@@ -73,5 +167,10 @@ ul.topnav li.dropdownIcon {
   ul.topnav.responsive li a {
     display: block;
     text-align: left;
+  }
+  .col-6 { /*Make video brake line when in mobile mode*/
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
