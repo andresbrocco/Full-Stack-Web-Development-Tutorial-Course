@@ -1,0 +1,13 @@
+.container {
+  background-color: hsla(232, 57%, 62%, 0.78);
+}
+
+.container-fluid {
+  background-color: hsla(262, 56%, 61%, 0.78);
+}
+
+[class*="col-"] {
+  background-color: hsla(279, 93%, 22%, 0.73);
+  border: 2px solid hsl(334, 16%, 44%);
+  color: white;
+}

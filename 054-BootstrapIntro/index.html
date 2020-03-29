@@ -10,7 +10,34 @@
     <title>Bootstrap Intro</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Hello, Bootstrap!</h1>
+    <br>
+    <div class="container">
+      <h2>I'm a standard container. I adjust my width based on the browser size.</h2>
+    </div>
+    <div class="container-fluid">
+      <h2>I'm a container-fluid. My width is always 100%</h2>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>I'm a col-sm-6. I am 6-col width, but when the browser get small, I grow to 12-col width</h2>
+        </div>
+      </div>
+      <h2>The next row has different column widths when browser is in large, medium and small sizes:</h2>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">Col 1</div>
+        <div class="col-sm-6 col-lg-4">Col 2</div>
+        <div class="col-sm-12 col-lg-4">Col 3</div>
+      </div>
+    </div>
+
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
