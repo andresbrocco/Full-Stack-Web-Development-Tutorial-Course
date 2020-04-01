@@ -1,0 +1,32 @@
+body.signin-body {
+  background-color: hsl(189, 43%, 82%);
+}
+
+.singnin-container {
+  margin-top: 10%;
+}
+
+.signin-card {
+  padding: 1rem;
+  background-color: hsl(0, 0%, 90%);
+  -webkit-box-shadow: 3px 3px 6px hsl(0, 0%, 56%);
+  -moz-box-shadow: 3px 3px 6px hsl(0, 0%, 56%);
+}
+
+.logo-img {
+  max-width: 50%;
+  margin-bottom: 1rem;
+}
+
+.signin-card .btn {
+  margin: 1rem 0;
+}
+
+.forgot-password {
+  float: right;
+}
+
+.create-account {
+  margin: 0.5rem;
+  text-align: center;
+}
