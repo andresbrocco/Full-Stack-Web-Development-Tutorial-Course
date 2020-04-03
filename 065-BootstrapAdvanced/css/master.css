@@ -1,0 +1,21 @@
+.carousel-row {
+  padding-bottom: 2rem;
+}
+.carousel-item img {
+  height: 30rem;
+  object-fit: cover; /* Crop the image if its larger than the container */
+}
+
+.sectionDark {
+  background-color: #cccccc;
+  /* height: 30rem; */
+}
+
+.medooze1-small {
+  width: 100%;
+  object-fit: cover;
+}
+
+.expandable-image-container {
+  margin: 0 15%;
+}
