@@ -19,3 +19,31 @@
 .expandable-image-container {
   margin: 0 15%;
 }
+
+.fa {
+  margin: 0.5rem;
+}
+
+.fa-facebook-square {
+  color: hsl(213, 55%, 40%);
+  text-shadow: 1px 1px 2px black;
+}
+
+.fa-instagram {  /* This is how to make color gradient in text!!! */
+  background: -webkit-linear-gradient(red, yellow);
+  text-shadow: 1px 1px 2px black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-whatsapp {
+  color: hsl(115, 67%, 30%);
+  text-shadow: 2px 2px 4px black;
+}
+
+.fa-telegram {
+  color: white;
+  text-shadow: 0px 0px 2px white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
