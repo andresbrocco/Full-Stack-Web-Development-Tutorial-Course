@@ -1,0 +1,69 @@
+// Variables
+$font-color: white
+$button-color: hsl(294, 36%, 54%)
+
+// Mixins
+=shaping($height, $width, $radius, $backgroundColor, $textColor)
+  height: $height
+  width: $width
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+  background-color: $backgroundColor
+  color: $textColor
+
+=btn-main()
+  background-color: $button-color
+  border-color: darken($button-color, 20%)
+  display: block
+  margin: auto
+  padding: 1rem
+  font-size: 2rem
+  border-radius: 20px
+  &:hover
+    background-color: lighten($button-color, 20%)
+
+
+// Styles
+body
+  background-color: cadetblue
+
+h1
+  color: $font-color
+
+
+.firstDiv
+  position: relative // Using the "position: relative" creates a new context for positioning its children when using "top, bottom, left, right".
+
+.circle
+  height: 6rem
+  width: 6rem
+  border-radius: 50%
+  box-shadow: 0 0 10px purple
+  position: absolute // Using "position: absolute" enables the positioning using "top, bottom, left, right" parameters.
+
+.circle1
+  background-color: blue
+  left: -20px
+  bottom: -30px
+  z-index: 2
+
+.circle2
+  background-color: violet
+  bottom: -30px
+  left: 450px
+  z-index: -2
+
+.thumb1
+  +shaping(120px, 500px, 10%, purple, $font-color)
+  text-align: center
+  padding-top: 15px
+
+.btn1
+  +btn-main()
+
+.btn2
+  +btn-main()
+  &:hover
+    background-color: darken($button-color, 20%)
