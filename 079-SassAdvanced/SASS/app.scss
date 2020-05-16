@@ -1,5 +1,6 @@
-@import "./_variables.sass";
-@import "./mixins.sass";
+@import "./_variables";
+@import "./_mixins";
+@import "./_extends";
 @import "./base/base-dir";
 @import "./layouts/layouts-dir";
 @import "./modules/modules-dir";

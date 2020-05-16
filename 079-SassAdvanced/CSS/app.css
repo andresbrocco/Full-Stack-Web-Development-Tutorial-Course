@@ -1,24 +1,84 @@
-/* Error: Missing argument $rad.
- *   ,--> SASS/modules/_pro-img.sass
- * 2 |   +border()
- *   |   ^^^^^^^^^ invocation
- *   '
- *   ,--> SASS/_mixins.sass
- * 1 | =border($rad, $shadow, $border)
- *   |  ============================== declaration
- *   '
- *   SASS/modules/_pro-img.sass 2:3      border()
- *   SASS/modules/_pro-img.sass 2:3      @import
- *   SASS/modules/_modules-dir.sass 3:9  @import
- *   SASS/app.sass 5:9                   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Missing argument $rad.\a   \250c \2500 \2500 > SASS/modules/_pro-img.sass\a 2 \2502    +border()\a   \2502    ^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > SASS/_mixins.sass\a 1 \2502  =border($rad, $shadow, $border)\a   \2502   \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   SASS/modules/_pro-img.sass 2:3      border()\a   SASS/modules/_pro-img.sass 2:3      @import\a   SASS/modules/_modules-dir.sass 3:9  @import\a   SASS/app.sass 5:9                   root stylesheet";
+body {
+  margin: 0;
+  padding: 0;
 }
+
+h1 {
+  color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+  text-align: center;
+  display: block;
+  width: 100%;
+  background-color: #008975;
+}
+#header h1 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+#main-nav {
+  background-color: #00aa8d;
+  width: 100%;
+  display: block;
+  padding: 10px 0 40px;
+}
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#main-nav ul li {
+  float: left;
+  margin-left: 30px;
+}
+#main-nav ul li a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #eee;
+}
+#main-nav ul li a:hover {
+  color: red;
+}
+
+.pro-img {
+  -webkit-box-shadow: 0 0 15px #555;
+  -moz-box-shadow: 0 0 15px #555;
+  box-shadow: 0 0 15px #555;
+  border: 1px solid #00aa8d;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #00aa8d;
+  width: 22%;
+  height: 120px;
+  display: inline-block;
+  float: left;
+  margin: 15px;
+}
+
+.alert, .oh-dang, .warning, .success {
+  border: 1px solid #333;
+  margin: 10px 0;
+  padding: 15px;
+  text-transform: uppercase;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.success {
+  background: #4caf50;
+}
+
+.warning {
+  background: #fc3;
+}
+
+.oh-dang {
+  background: red;
+}
+
+/*# sourceMappingURL=app.css.map */
