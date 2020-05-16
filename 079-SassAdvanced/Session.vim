@@ -12,7 +12,7 @@ set shortmess=aoO
 argglobal
 %argdel
 set lines=45 columns=192
-edit SASS/app.scss
+edit SASS/_variables.scss
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -28,12 +28,12 @@ setlocal fdl=10
 setlocal fml=1
 setlocal fdn=10
 setlocal fen
-let s:l = 7 - ((6 * winheight(0) + 20) / 41)
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 030|
+1
+normal! 0
 tabnext 1
 badd +6 SASS/layouts/_sections.scss
 badd +1 index.html
@@ -50,6 +50,7 @@ badd +1 SASS/states/_states-dir.scss
 badd +1 SASS/themes/_themes-dir.sass
 badd +2 SASS/_mixins.scss
 badd +7 SASS/app.scss
+badd +0 SASS/_variables.scss
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
